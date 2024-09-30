@@ -6,7 +6,7 @@ import { calculateRequiredLevels } from "../utils/shardsUtils";
 function ShardCalculator() {
   const [currentShards, setCurrentShards] = useState(0);
   const [currentLevel, setCurrentLevel] = useState(0);
-  const [targetShards, setTargetShards] = useState(4500);
+  const [targetShards, setTargetShards] = useState(2250);
   const [isCustom, setIsCustom] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -62,6 +62,19 @@ function ShardCalculator() {
             <div>
               <label className="block mb-1">Target Shards:</label>
               <div className="space-x-2 flex flex-row">
+                <div>
+                  <input
+                    type="radio"
+                    id="2250"
+                    name="shardOption"
+                    value="2250"
+                    checked={!isCustom && targetShards === 2250}
+                    onChange={handleShardOptionChange}
+                  />
+                  <label htmlFor="2250" className="ml-2">
+                    2250
+                  </label>
+                </div>
                 <div>
                   <input
                     type="radio"
