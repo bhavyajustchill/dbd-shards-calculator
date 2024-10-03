@@ -19,7 +19,7 @@ function ShardCalculator() {
   const handleReset = () => {
     setCurrentShards(0);
     setCurrentLevel(0);
-    setTargetShards(4500);
+    setTargetShards(2250);
     setIsCustom(false);
     setResult(null);
   };
