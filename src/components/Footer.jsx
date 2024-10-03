@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="text-center mt-8">
+    <footer className="text-center mt-5">
       Made with <span className="text-blue-500 text-xl">♥</span> by{" "}
       <a
         href="https://bhavyajustchill.pages.dev/"
