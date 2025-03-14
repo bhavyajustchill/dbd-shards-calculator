@@ -141,7 +141,7 @@ function ShardCalculator() {
                 Reset
               </button>
             </div>
-            <div className="flex items-center justify-center">
+            {/* <div className="flex items-center justify-center">
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -167,7 +167,7 @@ function ShardCalculator() {
                 </svg>
                 <span className="font-bold">Add Discord Bot</span>
               </button>
-            </div>
+            </div> */}
           </form>
           {result && typeof result === "object" && (
             <div className="mt-6">
