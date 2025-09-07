@@ -17,11 +17,16 @@ const shardsPerLevel = [
   300, 300,
 ];
 
-export function calculateRequiredLevels(currentShards, currentLevel, targetShards) {
+export function calculateRequiredLevels(
+  currentShards,
+  currentLevel,
+  targetShards,
+  xpMultiplier = 1
+) {
   let currentShardsAccumulated = currentShards;
   let levelsRequired = 0;
   let totalXPRequired = 0;
-  const avgXPPerMatch = 600;
+  const avgXPPerMatch = 600 * xpMultiplier;
   let initialCurrentLevel = currentLevel;
   let newLevel = 0;
 
