@@ -23,10 +23,14 @@ export function calculateRequiredLevels(
   targetShards,
   xpMultiplier = 1
 ) {
+  const normalizedMultiplier = Math.max(
+    1,
+    Number.isFinite(xpMultiplier) ? xpMultiplier : 1
+  );
   let currentShardsAccumulated = currentShards;
   let levelsRequired = 0;
   let totalXPRequired = 0;
-  const avgXPPerMatch = 600 * xpMultiplier;
+  const avgXPPerMatch = 600 * normalizedMultiplier;
   let initialCurrentLevel = currentLevel;
   let newLevel = 0;
 
